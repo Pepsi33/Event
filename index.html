@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./index.js"></script>
+    <script>
+        const event = new Events();
+        event.listen('a', function(a, b, c){
+            console.log(arguments);
+            console.log(`处罚了----a:${a}---b:${b}---c:${c}-`);
+        });
+
+        event.emit('a', 1, 2, 3);
+    </script>
+</body>
+</html>
